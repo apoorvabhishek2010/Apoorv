@@ -7,17 +7,16 @@
 <div id="row1"></div>
 <div class="row2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<div class="name"><h1>MootArca</h1><h2>Share Your Knowledge!</h2></div>
-<div class="row3"><div class="s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign In</div><div class="s2">Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></div>
+<div class="row3"><div class="s1" onclick="fun()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign In</div><div class="s2" onclick="fun2()">Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></div>
 </div>
 <div class="body">
 <div class="main">
-<form>
-
-    	<input id="in1" type="text" required title="Username required" placeholder="Username or E-Mail" data-icon="uname" name="uname">
+<form id="signinform">
+        <input id="in1" type="text" required title="Username required" placeholder="Username or E-Mail" data-icon="uname" name="uname">
         <input id="in2" type="password" required title="Password required" placeholder="Password" data-icon="passwd" name="passwd">       
         <input id="in3" name="submit" type="submit" class="enviar" value="SignIn Now"/>
        
-        
+
 
 </form>
 </div>
@@ -80,7 +79,7 @@ html, body{margin:0; padding:0; font-size:100%; font-family:Georgia, "Times New 
 }
 .body{
 	
-	background-image: url("images/batthern.png");
+	background-image: url("batthern.png");
 	max-width: 100%;
 	height: 500px;
 }
@@ -131,6 +130,11 @@ h2{
 	margin-right: 200px;
 	margin-top: -43px;
 }
+a .s1{
+	text-decoration: none;
+	font-size: 32px;
+	color: white;
+}
 a{
 	text-decoration: none;
 	color: #7f7f7f;
@@ -146,12 +150,52 @@ margin-top: -53px;}
 #in1,#in2,#in3{
 	border-radius: 15px;
 	margin-left: 60px;
-	min-height: 60px;
+	min-height: 40px;
 	margin-top: 60px;
 	min-width: 500px;
 	border-collapse: collapse;
 }
 
+#in4,#in5{
+	border-radius: 10px;
+	margin-left: 60px;
+	min-height: 40px;
+	margin-top: 60px;
+	min-width: 220px;
+	border-collapse: collapse;
+}
+#in6,#in7{
+	border-radius: 15px;
+	margin-left: 60px;
+	min-height: 40px;
+	margin-top: 60px;
+	min-width: 500px;
+	border-collapse: collapse;
+}
+#in8{
+	text-align:center;
+    border-radius: 15px;
+	margin-left: 60px;
+	min-height: 40px;
+	margin-top: 60px;
+	min-width: 200px;
+	border-collapse: collapse;
+}
+
+
 </style>
+<script type="text/javascript">
+function fun(){
+var txt=document.getElementById("signinform");
+txt.innerHTML="<form id='signinform'><input id='in1' type='text' required title='Username required' placeholder='Username or E-Mail' data-icon='uname' name='uname'><input id='in2' type='password' required title='Password required' placeholder='Password' data-icon='passwd' name='passwd'><input id='in3' name='submit' type='submit' class='enviar' value='SignIn Now'/></form>";
+}
+function fun2(){
+	var txt=document.getElementById("signinform");
+	txt.innerHTML="<form id='signinform'><input type='text' id='in4' required title='First Name Required' placeholder='First Name'><input type='text' id='in5' placeholder='Last Name'><input type='text' id='in6' required title='Email ID' placeholder='Email ID'><input type='text' id='in7' placeholder='Mobile No.'></form><input id='in8' type='submit' value='Submit'>";
+
+}
+
+
+</script>
 </body>
 </html>
